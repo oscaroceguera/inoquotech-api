@@ -1,6 +1,9 @@
 const Boom = require('boom')
 const Section = require('../models/section')
 const Service = require('../models/service')
+const Country = require('../models/country')
+const State = require('../models/state')
+const Town = require('../models/town')
 const Solicitud = require('../models/solicitud').Solicitud
 const _ = require('lodash')
 
@@ -35,11 +38,53 @@ exports.solicitud = (req, res) => {
     .find()
     .populate('sectionTypes')
     .populate('serviceTypes')
+    .populate('country')
+    .populate('state')
+    .populate('town')
     .exec((err, data) => {
       if (!err) {
         res.send(data)
       } else {
         return res.send(Boom.badImplementation(err))
       }
+  })
+}
+
+exports.countries = (req, res) => {
+  Country.find({}, (err, countries) => {
+    if (!err) {
+      if (countries.length === 0) {
+        return res.send(Boom.notFound('No se encontraron paises!'))
+      }
+      return res.send(countries)
+    } else {
+      return res.send(Boom.badImplementation(err))
+    }
+  })
+}
+
+exports.states = (req, res) => {
+  State.find({parentId: req.params.id}, (err, states) => {
+    if (!err) {
+      if (states.length === 0) {
+        return res.send(Boom.notFound('No se encontraron estados!'))
+      }
+      return res.send(states)
+    } else {
+      return res.send(Boom.badImplementation(err))
+    }
+  })
+}
+
+exports.towns = (req, res) => {
+  Town.find({parentId: req.params.id}, (err, towns) => {
+    if (!err) {
+      if (towns.length === 0) {
+        return res.send(Boom.notFound('No se encontraron ciudades!'))
+      }
+      return res.send(towns)
+    } else {
+      return res.send(Boom.badImplementation(err))
+    }
   })
 }

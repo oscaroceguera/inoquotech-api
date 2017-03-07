@@ -1,0 +1,412 @@
+[
+  {
+    "_id": "18385cba-0b26-43cd-a002-8e039aa20a77",
+    "value": "AGUASCALIENTES",
+    "parentId": "f86ddd46-c0fe-4689-b2bb-2c7565d811ae"
+  },
+  {
+    "_id": "593cb1ad-7f69-4cd3-a892-7f695922364c",
+    "value": "BAJA CALIFORNIA",
+    "parentId": "f86ddd46-c0fe-4689-b2bb-2c7565d811ae"
+  },
+  {
+    "_id": "1fc0aed3-bd9a-4913-8288-b54afb404eec",
+    "value": "BAJA CALIFORNIA SUR",
+    "parentId": "f86ddd46-c0fe-4689-b2bb-2c7565d811ae"
+  },
+  {
+    "_id": "2606cafa-4204-4120-a22a-0e1469f703eb",
+    "value": "CAMPECHE",
+    "parentId": "f86ddd46-c0fe-4689-b2bb-2c7565d811ae"
+  },
+  {
+    "_id": "b08eff04-7088-4531-ad00-2583308fdae9",
+    "value": "COAHUILA",
+    "parentId": "f86ddd46-c0fe-4689-b2bb-2c7565d811ae"
+  },
+  {
+    "_id": "91e0a7bd-e447-4852-91a4-1f8dea7cb7eb",
+    "value": "COLIMA",
+    "parentId": "f86ddd46-c0fe-4689-b2bb-2c7565d811ae"
+  },
+  {
+    "_id": "0b879638-cdb6-4e05-a1ce-f0265807bc74",
+    "value": "CHIAPAS",
+    "parentId": "f86ddd46-c0fe-4689-b2bb-2c7565d811ae"
+  },
+  {
+    "_id": "f9bd9c82-d22a-4052-859d-805324d56528",
+    "value": "CHIHUAHUA",
+    "parentId": "f86ddd46-c0fe-4689-b2bb-2c7565d811ae"
+  },
+  {
+    "_id": "8d7899eb-01d9-42f5-9d52-e12e5f46f4fe",
+    "value": "DISTRITO FEDERAL",
+    "parentId": "f86ddd46-c0fe-4689-b2bb-2c7565d811ae"
+  },
+  {
+    "_id": "86169b92-c4e6-40d8-9517-35651995f4f3",
+    "value": "DURANGO",
+    "parentId": "f86ddd46-c0fe-4689-b2bb-2c7565d811ae"
+  },
+  {
+    "_id": "0f2f1bb5-19e7-4c83-a899-dadc0410a86b",
+    "value": "GUANAJUATO",
+    "parentId": "f86ddd46-c0fe-4689-b2bb-2c7565d811ae"
+  },
+  {
+    "_id": "f024a6f1-d45c-4115-9ec5-0f5feaaaeb18",
+    "value": "GUERRERO",
+    "parentId": "f86ddd46-c0fe-4689-b2bb-2c7565d811ae"
+  },
+  {
+    "_id": "5d5fd822-c07a-4fcb-9790-a3645d6b58f3",
+    "value": "HIDALGO",
+    "parentId": "f86ddd46-c0fe-4689-b2bb-2c7565d811ae"
+  },
+  {
+    "_id": "faac41f1-41e3-4060-99cc-c794b43ded7f",
+    "value": "JALISCO",
+    "parentId": "f86ddd46-c0fe-4689-b2bb-2c7565d811ae"
+  },
+  {
+    "_id": "89a48a2d-ac8a-4ae0-91b0-96b10ff6b87b",
+    "value": "MEXICO",
+    "parentId": "f86ddd46-c0fe-4689-b2bb-2c7565d811ae"
+  },
+  {
+    "_id": "b3838d09-02f0-4d51-8100-647855d14a25",
+    "value": "MICHOACAN",
+    "parentId": "f86ddd46-c0fe-4689-b2bb-2c7565d811ae"
+  },
+  {
+    "_id": "3e50b2fb-e886-4873-a913-3f88ea669c4d",
+    "value": "MORELOS",
+    "parentId": "f86ddd46-c0fe-4689-b2bb-2c7565d811ae"
+  },
+  {
+    "_id": "80ca0a33-7d1c-4c73-a7a2-d8311490b9ff",
+    "value": "NAYARIT",
+    "parentId": "f86ddd46-c0fe-4689-b2bb-2c7565d811ae"
+  },
+  {
+    "_id": "1c57547d-b08c-4c67-a4cd-077dd4d7b5e1",
+    "value": "NUEVO LEON",
+    "parentId": "f86ddd46-c0fe-4689-b2bb-2c7565d811ae"
+  },
+  {
+    "_id": "39b9c016-eef3-4485-a507-236f14f21f6d",
+    "value": "OAXACA",
+    "parentId": "f86ddd46-c0fe-4689-b2bb-2c7565d811ae"
+  },
+  {
+    "_id": "f72d1077-03d9-4b8d-9cb7-21872f6c88a1",
+    "value": "PUEBLA",
+    "parentId": "f86ddd46-c0fe-4689-b2bb-2c7565d811ae"
+  },
+  {
+    "_id": "8741ff34-677d-4d7d-aedf-11fef9e18371",
+    "value": "QUERETARO",
+    "parentId": "f86ddd46-c0fe-4689-b2bb-2c7565d811ae"
+  },
+  {
+    "_id": "bfd8a7d3-38d0-42f7-ad94-0a382d54230c",
+    "value": "QUINTANA ROO",
+    "parentId": "f86ddd46-c0fe-4689-b2bb-2c7565d811ae"
+  },
+  {
+    "_id": "c92e0088-2824-4c2f-b1f3-16d677ebf95a",
+    "value": "SAN LUIS POTOSI",
+    "parentId": "f86ddd46-c0fe-4689-b2bb-2c7565d811ae"
+  },
+  {
+    "_id": "74a45c2e-5d51-4c33-8c26-659bdf42055a",
+    "value": "SINALOA",
+    "parentId": "f86ddd46-c0fe-4689-b2bb-2c7565d811ae"
+  },
+  {
+    "_id": "9ce781e3-7c0d-4a3f-bf6f-7ab08d7419ff",
+    "value": "SONORA",
+    "parentId": "f86ddd46-c0fe-4689-b2bb-2c7565d811ae"
+  },
+  {
+    "_id": "9cc32326-77b0-426c-99ae-f727f98f149e",
+    "value": "TABASCO",
+    "parentId": "f86ddd46-c0fe-4689-b2bb-2c7565d811ae"
+  },
+  {
+    "_id": "21bc4535-34ba-47e5-a5d9-87ecd25d3fca",
+    "value": "TAMAULIPAS",
+    "parentId": "f86ddd46-c0fe-4689-b2bb-2c7565d811ae"
+  },
+  {
+    "_id": "3ab42f85-e4f8-4a7f-b08b-8c4a8e7d6678",
+    "value": "TLAXCALA",
+    "parentId": "f86ddd46-c0fe-4689-b2bb-2c7565d811ae"
+  },
+  {
+    "_id": "f1d43ea0-4882-4e35-9066-1ba43a442a6c",
+    "value": "VERACRUZ",
+    "parentId": "f86ddd46-c0fe-4689-b2bb-2c7565d811ae"
+  },
+  {
+    "_id": "18cbf4b6-23d1-4e73-8720-059e2c15609a",
+    "value": "YUCATAN",
+    "parentId": "f86ddd46-c0fe-4689-b2bb-2c7565d811ae"
+  },
+  {
+    "_id": "ab195918-422c-4471-a267-a7770824e50b",
+    "value": "ZACATECAS",
+    "parentId": "f86ddd46-c0fe-4689-b2bb-2c7565d811ae"
+  },
+  {
+    "_id": "43c577bb-3fe5-4b56-be47-c36fd0c06eb3",
+    "value": "ALABAMA",
+    "parentId": "262a4c63-eb97-4248-9002-c9fe1fbf04d7"
+  },
+  {
+    "_id": "0e31c61d-8396-4ec1-8b75-6841879ef711",
+    "value": "ALASKA",
+    "parentId": "262a4c63-eb97-4248-9002-c9fe1fbf04d7"
+  },
+  {
+    "_id": "6786b792-f122-4ff1-80a3-5cf7016a048a",
+    "value": "ARIZONA",
+    "parentId": "262a4c63-eb97-4248-9002-c9fe1fbf04d7"
+  },
+  {
+    "_id": "56a39738-1b0e-4920-ac29-3adb9bd6f5fe",
+    "value": "ARKANSAS",
+    "parentId": "262a4c63-eb97-4248-9002-c9fe1fbf04d7"
+  },
+  {
+    "_id": "ea6cbf71-c4ff-46a4-9064-1d39feb064b0",
+    "value": "CALIFORNIA",
+    "parentId": "262a4c63-eb97-4248-9002-c9fe1fbf04d7"
+  },
+  {
+    "_id": "7597f4ae-a3df-497d-b89f-5e33a51c4762",
+    "value": "CAROLINA DEL NORTE",
+    "parentId": "262a4c63-eb97-4248-9002-c9fe1fbf04d7"
+  },
+  {
+    "_id": "230c3311-0c28-449b-ae00-8ececc37ce56",
+    "value": "CAROLINA DEL SUR",
+    "parentId": "262a4c63-eb97-4248-9002-c9fe1fbf04d7"
+  },
+  {
+    "_id": "5549076a-ce7d-4059-81f5-d3fd7aff7940",
+    "value": "COLORADO",
+    "parentId": "262a4c63-eb97-4248-9002-c9fe1fbf04d7"
+  },
+  {
+    "_id": "39dc1e90-7cb9-4c97-9224-ab836bcd05f2",
+    "value": "CONNECTICUT",
+    "parentId": "262a4c63-eb97-4248-9002-c9fe1fbf04d7"
+  },
+  {
+    "_id": "5c8311e4-f83b-48d1-bbaf-4d8cbb9bca68",
+    "value": "DAKOTA DEL NORTE",
+    "parentId": "262a4c63-eb97-4248-9002-c9fe1fbf04d7"
+  },
+  {
+    "_id": "cbc4cb51-7d31-45f3-8ba9-34de30e26b0d",
+    "value": "DAKOTA DEL SUR",
+    "parentId": "262a4c63-eb97-4248-9002-c9fe1fbf04d7"
+  },
+  {
+    "_id": "4e10bb11-c375-4731-af12-b0aefe9d2ea8",
+    "value": "DELAWARE",
+    "parentId": "262a4c63-eb97-4248-9002-c9fe1fbf04d7"
+  },
+  {
+    "_id": "f08df14c-ce4d-409f-8bd7-48277b200f0f",
+    "value": "FLORIDA",
+    "parentId": "262a4c63-eb97-4248-9002-c9fe1fbf04d7"
+  },
+  {
+    "_id": "3375e492-44a5-47a4-ac00-79f6673aba92",
+    "value": "GEORGIA",
+    "parentId": "262a4c63-eb97-4248-9002-c9fe1fbf04d7"
+  },
+  {
+    "_id": "d6f9eb16-ed74-44f1-9527-fb7399a8af07",
+    "value": "HAWÃ¡I",
+    "parentId": "262a4c63-eb97-4248-9002-c9fe1fbf04d7"
+  },
+  {
+    "_id": "d01bedc8-b34d-48a8-aab6-a350e1869822",
+    "value": "IDAHO",
+    "parentId": "262a4c63-eb97-4248-9002-c9fe1fbf04d7"
+  },
+  {
+    "_id": "58b8321e-7683-42cd-8881-264d97e1a635",
+    "value": "ILLINOIS",
+    "parentId": "262a4c63-eb97-4248-9002-c9fe1fbf04d7"
+  },
+  {
+    "_id": "c9ff0eae-a280-436f-a18d-e3104a81b4de",
+    "value": "INDIANA",
+    "parentId": "262a4c63-eb97-4248-9002-c9fe1fbf04d7"
+  },
+  {
+    "_id": "90631b50-43c0-4a70-85c2-7d001bd81b6d",
+    "value": "IOWA",
+    "parentId": "262a4c63-eb97-4248-9002-c9fe1fbf04d7"
+  },
+  {
+    "_id": "24e51dcf-a97e-4741-8ed4-7f7315cab649",
+    "value": "KANSAS",
+    "parentId": "262a4c63-eb97-4248-9002-c9fe1fbf04d7"
+  },
+  {
+    "_id": "1626d783-6978-442f-8e69-0d8c25f91f94",
+    "value": "KENTUCKY",
+    "parentId": "262a4c63-eb97-4248-9002-c9fe1fbf04d7"
+  },
+  {
+    "_id": "a3633289-dc01-425d-b44c-2cf404074527",
+    "value": "LUISIANA",
+    "parentId": "262a4c63-eb97-4248-9002-c9fe1fbf04d7"
+  },
+  {
+    "_id": "585657f1-e6c8-4255-a4c4-4d17d3880668",
+    "value": "MAINE",
+    "parentId": "262a4c63-eb97-4248-9002-c9fe1fbf04d7"
+  },
+  {
+    "_id": "660d9f59-2a3a-47ea-a658-f0ef187cf9b9",
+    "value": "MARYLAND",
+    "parentId": "262a4c63-eb97-4248-9002-c9fe1fbf04d7"
+  },
+  {
+    "_id": "504f3ab3-307e-4848-997f-c4dc531cdca4",
+    "value": "MASSACHUSETTS",
+    "parentId": "262a4c63-eb97-4248-9002-c9fe1fbf04d7"
+  },
+  {
+    "_id": "6b3b40ad-5c7b-4bf7-8004-8a15d6e68915",
+    "value": "MICHIGAN",
+    "parentId": "262a4c63-eb97-4248-9002-c9fe1fbf04d7"
+  },
+  {
+    "_id": "21157f4e-3c8a-447b-a7b4-6b3eb4e5afb2",
+    "value": "MINNESOTA",
+    "parentId": "262a4c63-eb97-4248-9002-c9fe1fbf04d7"
+  },
+  {
+    "_id": "ab686eee-0fbc-47d2-b16f-2cf05df8bc64",
+    "value": "MISISIPI",
+    "parentId": "262a4c63-eb97-4248-9002-c9fe1fbf04d7"
+  },
+  {
+    "_id": "601d7766-a9ff-4e44-8779-21a9e4b5c754",
+    "value": "MISURI",
+    "parentId": "262a4c63-eb97-4248-9002-c9fe1fbf04d7"
+  },
+  {
+    "_id": "02e91c68-f3bb-44af-9b71-a8254773b9df",
+    "value": "MONTANA",
+    "parentId": "262a4c63-eb97-4248-9002-c9fe1fbf04d7"
+  },
+  {
+    "_id": "a08a95e8-0f56-45b1-8fd9-2bc97500581f",
+    "value": "NEBRASKA",
+    "parentId": "262a4c63-eb97-4248-9002-c9fe1fbf04d7"
+  },
+  {
+    "_id": "31a6e21f-d9d6-4783-bdad-6c04719f02c6",
+    "value": "NEVADA",
+    "parentId": "262a4c63-eb97-4248-9002-c9fe1fbf04d7"
+  },
+  {
+    "_id": "2d770a23-a9d8-4c4d-a302-d44e6c9cab52",
+    "value": "NUEVA JERSEY",
+    "parentId": "262a4c63-eb97-4248-9002-c9fe1fbf04d7"
+  },
+  {
+    "_id": "0c59f83f-4af7-4edf-a8ed-394a566f06c8",
+    "value": "NUEVA YORK",
+    "parentId": "262a4c63-eb97-4248-9002-c9fe1fbf04d7"
+  },
+  {
+    "_id": "7297e536-0bae-43a6-9719-15c758d035ec",
+    "value": "NUEVO HAMPSHIRE",
+    "parentId": "262a4c63-eb97-4248-9002-c9fe1fbf04d7"
+  },
+  {
+    "_id": "64449e6c-1933-4d34-a628-bf0ab27efa7d",
+    "value": "NUEVO MEXICO",
+    "parentId": "262a4c63-eb97-4248-9002-c9fe1fbf04d7"
+  },
+  {
+    "_id": "10acae04-3dd8-44b3-a625-c997e348cf41",
+    "value": "OHIO",
+    "parentId": "262a4c63-eb97-4248-9002-c9fe1fbf04d7"
+  },
+  {
+    "_id": "0c39ec97-46e8-4017-8f73-a4e04e6afe7f",
+    "value": "OKLAHOMA",
+    "parentId": "262a4c63-eb97-4248-9002-c9fe1fbf04d7"
+  },
+  {
+    "_id": "bade01c2-6c6a-4bf5-9e14-71c119dfbdeb",
+    "value": "OREGON",
+    "parentId": "262a4c63-eb97-4248-9002-c9fe1fbf04d7"
+  },
+  {
+    "_id": "bd8262f9-198e-4602-8121-1e6e59efa5cb",
+    "value": "PENSILVANIA",
+    "parentId": "262a4c63-eb97-4248-9002-c9fe1fbf04d7"
+  },
+  {
+    "_id": "52eff7cf-9569-46d3-b7f1-afe53a4c7a84",
+    "value": "RHODE ISLAND",
+    "parentId": "262a4c63-eb97-4248-9002-c9fe1fbf04d7"
+  },
+  {
+    "_id": "9d547b30-70fc-44f1-8e0e-68aa7a7fe6a5",
+    "value": "TENNESSEE",
+    "parentId": "262a4c63-eb97-4248-9002-c9fe1fbf04d7"
+  },
+  {
+    "_id": "0a480f70-eaea-49d8-b627-aca81be297a3",
+    "value": "TEXAS",
+    "parentId": "262a4c63-eb97-4248-9002-c9fe1fbf04d7"
+  },
+  {
+    "_id": "364703bd-f2b4-4ded-851c-1ce66dc5aac9",
+    "value": "UTAH",
+    "parentId": "262a4c63-eb97-4248-9002-c9fe1fbf04d7"
+  },
+  {
+    "_id": "758f523b-6aea-47db-bf4f-5ec27636356f",
+    "value": "VERMONT",
+    "parentId": "262a4c63-eb97-4248-9002-c9fe1fbf04d7"
+  },
+  {
+    "_id": "364e9c91-6123-4fa8-9998-cdbd70605a49",
+    "value": "VIRGINIA",
+    "parentId": "262a4c63-eb97-4248-9002-c9fe1fbf04d7"
+  },
+  {
+    "_id": "efb91a6b-803c-45e5-94aa-8a0631f83718",
+    "value": "VIRGINIA OCCIDENTAL",
+    "parentId": "262a4c63-eb97-4248-9002-c9fe1fbf04d7"
+  },
+  {
+    "_id": "24524fa2-1209-4c3d-90bf-df70001f567b",
+    "value": "WASHINGTON",
+    "parentId": "262a4c63-eb97-4248-9002-c9fe1fbf04d7"
+  },
+  {
+    "_id": "39f53c40-0929-4694-a53c-3b8485e8017c",
+    "value": "WISCONSIN",
+    "parentId": "262a4c63-eb97-4248-9002-c9fe1fbf04d7"
+  },
+  {
+    "_id": "647244a4-1c9e-47ff-8074-e7bbbfef47bf",
+    "value": "WYOMING",
+    "parentId": "262a4c63-eb97-4248-9002-c9fe1fbf04d7"
+  }
+]
