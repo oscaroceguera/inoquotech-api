@@ -6,10 +6,6 @@ global.config = require('./config/config')
 
 const db = require('./config/db')
 
-// Si hay un cambio en las colecciones remover para actualizar
-// Modelos para data static
-const Section = require('./models/section')
-
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 
