@@ -26,5 +26,7 @@ module.exports = mongoose.model('RequestCompany', new Schema({
   contactName: String,
   contactPhone: String,
   contactEmail: String,
-  contactPosition: String
+  contactPosition: String,
+  created_at: { type: Date, required: true, default: Date.now },
+  updated_at: Date
 }))

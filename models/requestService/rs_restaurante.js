@@ -15,5 +15,7 @@ module.exports = mongoose.model('RequestRestaurante', new Schema({
   congelacion: String,
   verificacion: String,
   sanitarios: String,
-  capacitacion: String
+  capacitacion: String,
+  created_at: { type: Date, required: true, default: Date.now },
+  updated_at: Date
 }))

@@ -44,5 +44,7 @@ module.exports = mongoose.model('RequestService', new Schema({
   distribuidora: {type: Schema.Types.String, ref: 'RequestDistribuidora'},
   laboratorio: {type: Schema.Types.String, ref: 'RequestLaboratorio'},
   restaurante: {type: Schema.Types.String, ref: 'RequestRestaurante'},
-  transporte: {type: Schema.Types.String, ref: 'RequestTransporte'}
+  transporte: {type: Schema.Types.String, ref: 'RequestTransporte'},
+  created_at: { type: Date, required: true, default: Date.now },
+  updated_at: Date
 }))

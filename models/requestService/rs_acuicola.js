@@ -12,5 +12,7 @@ module.exports = mongoose.model('RequestAcuicola', new Schema({
   ubicacionProduccion: String,
   tipoProduccion: String,
   empacado: String,
-  albergues: String
+  albergues: String,
+  created_at: { type: Date, required: true, default: Date.now },
+  updated_at: Date
 }))

@@ -5,7 +5,6 @@ const Country = require('../models/catalogs/country')
 const State = require('../models/catalogs/state')
 const Town = require('../models/catalogs/town')
 const RequestStatus = require('../models/catalogs/requestStatus')
-const Solicitud = require('../models/solicitud').Solicitud
 const _ = require('lodash')
 
 exports.sections = (req, res) => {
@@ -31,23 +30,6 @@ exports.services = (req, res) => {
     } else {
       return res.send(Boom.badImplementation(err))
     }
-  })
-}
-
-exports.solicitud = (req, res) => {
-  Solicitud
-    .find()
-    .populate('sectionTypes')
-    .populate('serviceTypes')
-    .populate('country')
-    .populate('state')
-    .populate('town')
-    .exec((err, data) => {
-      if (!err) {
-        res.send(data)
-      } else {
-        return res.send(Boom.badImplementation(err))
-      }
   })
 }
 

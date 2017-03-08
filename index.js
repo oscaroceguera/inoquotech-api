@@ -19,7 +19,7 @@ if (port === 3000) {
   }
 } else {
   corsOptions = {
-    origin: 'http://mcfly.tecsiapp.com'
+    origin: 'http://inoquotech.com'
   }
 }
 

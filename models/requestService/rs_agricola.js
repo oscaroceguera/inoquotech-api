@@ -11,5 +11,7 @@ module.exports = mongoose.model('RequestAgricola', new Schema({
   hectarea: String,
   productos: String,
   empacado: String,
-  albergues: String
+  albergues: String,
+  created_at: { type: Date, required: true, default: Date.now },
+  updated_at: Date
 }))

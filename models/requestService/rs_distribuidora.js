@@ -11,5 +11,7 @@ module.exports = mongoose.model('RequestDistribuidora', new Schema({
   almacenes: String,
   productos: String,
   mercado: String,
-  importa: String
+  importa: String,
+  created_at: { type: Date, required: true, default: Date.now },
+  updated_at: Date
 }))

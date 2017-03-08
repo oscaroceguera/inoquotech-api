@@ -15,5 +15,7 @@ module.exports = mongoose.model('RequestTransporte', new Schema({
   noVehiculos: String,
   talleres: String,
   registros: String,
-  toxicologicos: String
+  toxicologicos: String,
+  created_at: { type: Date, required: true, default: Date.now },
+  updated_at: Date
 }))

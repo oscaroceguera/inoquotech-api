@@ -10,5 +10,7 @@ module.exports = mongoose.model('RequestLaboratorio', new Schema({
   },
   giro: String,
   normativa: String,
-  ensayos: String
+  ensayos: String,
+  created_at: { type: Date, required: true, default: Date.now },
+  updated_at: Date
 }))

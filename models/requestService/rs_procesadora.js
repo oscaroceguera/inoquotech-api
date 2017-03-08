@@ -10,5 +10,7 @@ module.exports = mongoose.model('RequestProcesadora', new Schema({
   },
   productos: String,
   turnos: String,
-  plantas: String
+  plantas: String,
+  created_at: { type: Date, required: true, default: Date.now },
+  updated_at: Date
 }))
