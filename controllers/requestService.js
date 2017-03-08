@@ -1,5 +1,6 @@
 const Boom = require('boom')
 const uuid = require('uuid')
+const _ = require('lodash')
 
 const RequestService = require('../models/RequestService/RequestService')
 const RequestCompany = require('../models/RequestService/rs_company')
@@ -11,6 +12,8 @@ const RequestProcesadora = require('../models/RequestService/rs_procesadora')
 const RequestRestaurante = require('../models/RequestService/rs_restaurante')
 const RequestTransporte = require('../models/RequestService/rs_transporte')
 
+// Acceso a ClientCompany
+const ClientCompany = require('../models/client/company')
 
 const GIRO_COMPANY = {
   'eef691f0-eefe-431e-9864-23287feaf204': require('../models/RequestService/rs_agricola'),
@@ -44,6 +47,21 @@ function add(model, body) {
   })
 }
 
+const find = (model, query) => {
+  return new Promise((resolve, reject) => {
+    model.find(query, (err, data) => {
+      if (!err) {
+        if (data.length === 0) {
+          return reject(Boom.notFound())
+        }
+        resolve(data)
+      } else {
+        reject(Boom.badImplementation(err))
+      }
+    })
+  })
+}
+
 exports.createRequestService = (req, res) => {
   const body = req.body
 
@@ -65,12 +83,15 @@ exports.createRequestService = (req, res) => {
   }
 
   if (data.isClient) {
-    console.log('------ ES CLIENTE ------');
-    // TODO: Busqueda del cliente sino error
     data.isClientRFC = body.client.isClientRFC
-    add(RequestService, data)
-      .then(datos => res.json(datos))
-      .catch(err => res.send(Boom.badImplementation(err)))
+    // BUSCAR CLIENTE
+    find(ClientCompany, {rfc: data.isClientRFC.toUpperCase()})
+      .then((datos) => {
+        add(RequestService, data)
+          .then(datos => res.json(datos))
+          .catch(err => res.send(Boom.badImplementation(err)))
+      }, (err) => res.status(404).send('No se encontro como cliente registrado'))
+      .catch(err => res.send(err))
 
   } else {
     const idReferencia = uuid.v4()

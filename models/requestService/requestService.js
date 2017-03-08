@@ -30,7 +30,10 @@ module.exports = mongoose.model('RequestService', new Schema({
     type: Boolean,
     default: false
   },
-  isClientRFC: String,
+  isClientRFC: {
+    type: String,
+    uppercase: true
+  },
   status: {
     type: Schema.Types.String,
     require: true,

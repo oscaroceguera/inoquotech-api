@@ -10,7 +10,10 @@ module.exports = mongoose.model('RequestCompany', new Schema({
   },
   companyGiro: {type: Schema.Types.String, ref: 'Section'},
   companyName: String,
-  rfc: String,
+  rfc: {
+    type: String,
+    uppercase: true
+  },
   country: {type: Schema.Types.String, ref: 'Country'},
   state: {type: Schema.Types.String, ref: 'State'},
   town: {type: Schema.Types.String, ref: 'Town'},

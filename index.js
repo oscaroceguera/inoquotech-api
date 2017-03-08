@@ -3,8 +3,6 @@ const bodyParser = require('body-parser')
 const app = express()
 var cors = require('cors')
 
-// TODO: CREATE_ADD Y UPDATE_AT PARA TODOS
-
 global.config = require('./config/config')
 
 const port = process.env.PORT || global.config.server.port

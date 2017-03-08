@@ -25,16 +25,15 @@ db.on('error', console.error.bind(console, 'connection error'))
 
 db.once('open', () => {
 
-  // Drop datata base
-  mongoose.connection.db.dropDatabase();
+  // Drop datata base & load static data
+  // mongoose.connection.db.dropDatabase();
 
-  // Load stastic data
-  Service.create(serviceTypes)
-  Section.create(sectionTypes)
-  Country.create(countries)
-  State.create(states)
-  Town.create(towns)
-  ReqStatus.create(reqStatusTypes)
+  // Service.create(serviceTypes)
+  // Section.create(sectionTypes)
+  // Country.create(countries)
+  // State.create(states)
+  // Town.create(towns)
+  // ReqStatus.create(reqStatusTypes)
 
   console.log('Connection with database success')
 })

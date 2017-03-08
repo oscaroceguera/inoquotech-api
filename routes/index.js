@@ -3,6 +3,7 @@ const {
   states, towns, requestStatus
 } = require('../controllers/catalogs')
 const {createRequestService, getRequestService} = require('../controllers/requestService')
+const {addClient, getClientByRfc} = require('../controllers/client')
 
 module.exports = (app) => {
   app
@@ -14,4 +15,6 @@ module.exports = (app) => {
   .get('/catalogs/reqStatusTypes', requestStatus)
   .get('/requestService', getRequestService)
   .post('/requestService', createRequestService)
+  .post('/clients', addClient)
+  .get('/clients/:rfc', getClientByRfc)
 }
