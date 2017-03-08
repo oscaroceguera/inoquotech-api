@@ -1,9 +1,10 @@
 const Boom = require('boom')
-const Section = require('../models/section')
-const Service = require('../models/service')
-const Country = require('../models/country')
-const State = require('../models/state')
-const Town = require('../models/town')
+const Section = require('../models/catalogs/section')
+const Service = require('../models/catalogs/service')
+const Country = require('../models/catalogs/country')
+const State = require('../models/catalogs/state')
+const Town = require('../models/catalogs/town')
+const RequestStatus = require('../models/catalogs/requestStatus')
 const Solicitud = require('../models/solicitud').Solicitud
 const _ = require('lodash')
 
@@ -83,6 +84,19 @@ exports.towns = (req, res) => {
         return res.send(Boom.notFound('No se encontraron ciudades!'))
       }
       return res.send(towns)
+    } else {
+      return res.send(Boom.badImplementation(err))
+    }
+  })
+}
+
+exports.requestStatus = (req, res) => {
+  RequestStatus.find({}, (err, status) => {
+    if (!err) {
+      if (status.length === 0) {
+        return res.send(Boom.notFound('No se encontraron status registrados!'))
+      }
+      return res.send(status)
     } else {
       return res.send(Boom.badImplementation(err))
     }
