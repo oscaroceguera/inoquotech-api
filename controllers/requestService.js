@@ -50,7 +50,6 @@ exports.createRequestService = (req, res) => {
 
   if (data.isClient) {
     data.isClientRFC = body.client.isClientRFC
-
     findOneByQuery(ClientCompany, {rfc: data.isClientRFC.toUpperCase()})
       .then((datos) => {
         if (datos.length === 0) {

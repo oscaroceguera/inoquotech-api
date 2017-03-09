@@ -1,7 +1,8 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const app = express()
-var cors = require('cors')
+const cors = require('cors')
+const morgan = require('morgan')
 
 global.config = require('./config/config')
 
@@ -22,7 +23,7 @@ if (port === 3000) {
 }
 
 app.use(cors(corsOptions))
-
+app.use(morgan('dev'))
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 
