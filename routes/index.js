@@ -1,6 +1,7 @@
 const {
   sections, services, countries,
-  states, towns, requestStatus
+  states, towns, requestStatus, modules,
+  userStatuses
 } = require('../controllers/catalogs')
 const {createRequestService, getRequestService} = require('../controllers/requestService')
 const {addClient, getClientByRfc} = require('../controllers/client')
@@ -13,6 +14,8 @@ module.exports = (app) => {
   .get('/catalogs/states/:id', states)
   .get('/catalogs/towns/:id', towns)
   .get('/catalogs/reqStatusTypes', requestStatus)
+  .get('/catalogs/moduleTypes', modules)
+  .get('/catalogs/userStatusTypes', userStatuses)
   .get('/requestService', getRequestService)
   .post('/requestService', createRequestService)
   .post('/clients', addClient)

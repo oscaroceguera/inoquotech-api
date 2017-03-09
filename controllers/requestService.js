@@ -4,16 +4,9 @@ const _ = require('lodash')
 
 const RequestService = require('../models/RequestService/RequestService')
 const RequestCompany = require('../models/RequestService/rs_company')
-const RequestAgricola = require('../models/RequestService/rs_agricola')
-const RequestAcuicola = require('../models/RequestService/rs_acuicola')
-const RequestDistribuidora = require('../models/RequestService/rs_distribuidora')
-const RequestLaboratorio = require('../models/RequestService/rs_laboratorio')
-const RequestProcesadora = require('../models/RequestService/rs_procesadora')
-const RequestRestaurante = require('../models/RequestService/rs_restaurante')
-const RequestTransporte = require('../models/RequestService/rs_transporte')
-
-// Acceso a ClientCompany
 const ClientCompany = require('../models/client/company')
+
+const {findOneByQuery, saved} = require('../helpers/queries')
 
 const GIRO_COMPANY = {
   'eef691f0-eefe-431e-9864-23287feaf204': require('../models/RequestService/rs_agricola'),
@@ -33,33 +26,6 @@ const GIRO_COMPANY_SECTION = {
   '48ddf850-317f-4cf7-84e2-2d0e5a89ba0c': 'laboratorio',
   '7a814d5a-ef2a-4699-965c-5f4edad7aa17': 'restaurante',
   '1bf176d4-b193-456d-8f79-cea2a381b17e': 'transporte'
-}
-
-function add(model, body) {
-  return new Promise((resolve, reject) => {
-    model.create(body, (err, data) => {
-      if (!err) {
-        resolve(data)
-      } else {
-        reject(err)
-      }
-    })
-  })
-}
-
-const find = (model, query) => {
-  return new Promise((resolve, reject) => {
-    model.find(query, (err, data) => {
-      if (!err) {
-        if (data.length === 0) {
-          return reject(Boom.notFound())
-        }
-        resolve(data)
-      } else {
-        reject(Boom.badImplementation(err))
-      }
-    })
-  })
 }
 
 exports.createRequestService = (req, res) => {
@@ -84,14 +50,18 @@ exports.createRequestService = (req, res) => {
 
   if (data.isClient) {
     data.isClientRFC = body.client.isClientRFC
-    // BUSCAR CLIENTE
-    find(ClientCompany, {rfc: data.isClientRFC.toUpperCase()})
+
+    findOneByQuery(ClientCompany, {rfc: data.isClientRFC.toUpperCase()})
       .then((datos) => {
-        add(RequestService, data)
-          .then(datos => res.json(datos))
-          .catch(err => res.send(Boom.badImplementation(err)))
-      }, (err) => res.status(404).send('No se encontro como cliente registrado'))
-      .catch(err => res.send(err))
+        if (datos.length === 0) {
+          return res.json(datos)
+        }
+
+        saved(RequestService, data)
+          .then(dataResponse => res.json(dataResponse))
+          .catch(err => Boom.badImplementation(err))
+      })
+      .catch(err => Boom.badImplementation(err))
 
   } else {
     const idReferencia = uuid.v4()
@@ -99,18 +69,18 @@ exports.createRequestService = (req, res) => {
     const giro = [GIRO_COMPANY_SECTION[body.company.companyGiro]]
     data[giro] = idReferencia
 
-    add(RequestService, data)
+    saved(RequestService, data)
       .then((datos) => {
         const _company = body.company
         _company._id = idReferencia
 
-        add(RequestCompany, _company)
+        saved(RequestCompany, _company)
           .then((datosCompany) => {
             const bodySection = body[GIRO_COMPANY_SECTION[datosCompany.companyGiro]]
             bodySection._id = idReferencia
             const section = GIRO_COMPANY[datosCompany.companyGiro]
 
-            add(section, bodySection)
+            saved(section, bodySection)
               .then((dataSection) => {
                 const dataResponse = {
                   solicitud: datos,
@@ -119,13 +89,12 @@ exports.createRequestService = (req, res) => {
                 }
                 res.json(dataResponse)
               })
-              .catch((err) => res.send(Boom.badImplementation(err)))
+              .catch(err => res.send(Boom.badImplementation(err)))
           })
           .catch(err => res.send(Boom.badImplementation(err)))
       })
       .catch(err => res.send(Boom.badImplementation(err)))
   }
-
 }
 
 exports.getRequestService = (req, res) => {

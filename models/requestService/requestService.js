@@ -14,7 +14,10 @@ module.exports = mongoose.model('RequestService', new Schema({
     require: true,
     ref: 'Service'
   }],
-  esquema: String,
+  esquema: {
+    type: String,
+    require: true
+  },
   hasCertificado: String,
   capacitacionTema: String,
   cantidadPersonas: String,
