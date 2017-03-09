@@ -8,7 +8,10 @@ module.exports = mongoose.model('ClientCompany', new Schema({
     default: uuid.v4,
     ref: 'ClientCompany'
   },
-  rfc: String,
+  rfc: {
+    type: String,
+    uppercase: true
+  },
   name: String,
   created_at: { type: Date, required: true, default: Date.now },
   updated_at: Date
