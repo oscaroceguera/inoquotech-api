@@ -9,5 +9,8 @@ module.exports = mongoose.model('Module', new Schema({
     ref: 'Module',
     unique: true
   },
-  value: String
+  value: String,
+  description: String,
+  iconType: String,
+  path: String
 }))
