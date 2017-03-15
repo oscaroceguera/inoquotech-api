@@ -55,7 +55,7 @@ exports.addUser = (req, res) => {
 }
 
 exports.getUsers = (req, res) =>
-  findAll(User)
+  findAll(User, 'userStatus', 'moduleTypes')
     .then(data => {
       const userData = data.map((data) => {
         const dataJSON = {

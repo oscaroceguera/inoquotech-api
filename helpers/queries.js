@@ -1,4 +1,4 @@
-exports.findAll = (model) => {
+exports.findAll = (model, popu1 = '', popu2 = '') => {
   const message = 'no se encontraron registros'
   return new Promise((resolve, reject) => {
     model.find({}, (err, data) => {
@@ -11,6 +11,8 @@ exports.findAll = (model) => {
         reject(err)
       }
     })
+    .populate(popu1)
+    .populate(popu2)
   })
 }
 
