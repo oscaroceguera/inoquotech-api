@@ -5,6 +5,7 @@ const {
 } = require('../controllers/catalogs')
 const {createRequestService, getRequestService} = require('../controllers/requestService')
 const {addClient, getClientByRfc} = require('../controllers/client')
+const {addUser, getUsers, userById} = require('../controllers/users')
 
 module.exports = (app) => {
   app
@@ -20,4 +21,7 @@ module.exports = (app) => {
   .post('/requestService', createRequestService)
   .post('/clients', addClient)
   .get('/clients/:rfc', getClientByRfc)
+  .post('/users', addUser)
+  .get('/users', getUsers)
+  .get('/users/:id', userById)
 }
